@@ -1,39 +1,52 @@
 html { box-sizing: border-box; }
 *, ::before, ::after { box-sizing: inherit; }
 
+:root {
+	--svetlejsi-text: #313131;
+}
+
 body {
 	font-family: sans-serif;
 	max-width: 600px;
 	margin: auto;
-	padding: 20px;
+	padding: 0 20px;
 }
 h1 {
 	font-size: 3rem;
 	text-align: center;
 }
+h2 {
+	font-size: 1.3rem;
+	font-weight: bold;
+}
 .hraci {
 	display: flex;
 	justify-content: space-between;
-	padding-bottom: 20px;
+	padding-bottom: 1rem;
 }
 .hraci img {
-	width: 80px;
-	height: 80px;
+	width: 60px;
+	height: 60px;
 	object-fit: cover;
 	border-radius: 10px;
 }
 .hrac {
 	display: flex;
-	width: 170px;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 }
 .hrac-bily{
 	order: 1;
+	margin-left: 0.5rem;
+}
+.hrac-bily p,
+.hrac-cerny p {
+	color: var(--svetlejsi-text);
 }
 .hrac-cerny{
 	text-align: right;
+	margin-right: 0.5rem;
 }
 .hraci h2,
 p {
@@ -81,34 +94,52 @@ p {
 	grid-column: 2;
 	grid-row: 5;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/* .sachovnice {	
+.sachovnice > li:nth-child(6) {
+	display: none;
 }
-.policka {
-	/* background-image: url("obrazky/sachovnice.png");
-	background-size: cover;
-	background-repeat: no-repeat; */
-/* 	border: 10px solid #4b361d;
-	border-radius: 10px;
-	margin: 0;
-	padding: 0;
-	display: grid;
-	grid-template-columns: repeat(8, 1fr);
-	grid-template-rows: repeat(8, 1fr);
+.sachovnice > li:nth-child(7) {
+	grid-column: 4;
+	grid-row: 4;
 }
-
-.sachovnice li {
-	list-style: none;
-	padding-left: none;
-} */ 
+.sachovnice > li:nth-child(8) {
+	grid-column: 3;
+	grid-row: 3;
+}
+.sachovnice > li:nth-child(9) {
+	display: none;
+}
+.sachovnice > li:nth-child(10) {
+	grid-column: 5;
+	grid-row: 1;
+}
+.sachovnice > li:nth-child(11) {
+	display: none;
+}
+.sachovnice > li:nth-child(12) {
+	grid-column: 3;
+	grid-row: 8;
+}
+.sachovnice > li:nth-child(13) {
+	grid-column: 1;
+	grid-row: 2;
+}
+.sachovnice > li:nth-child(14) {
+	grid-column: 8;
+	grid-row: 4;
+}
+.vitez {
+	text-align: center;
+	margin-top: 2.5rem;
+	font-size: 1.3rem;
+	color: var(--svetlejsi-text);
+}
+.novahra {
+	display: block;
+	margin: auto;
+	margin-top: 1.2rem;
+	background-color: #4C7DC0;
+	color: white;
+	padding: 0.4rem 1.6rem;
+	border-radius: 3px;
+	border: 1px solid #304D76;
+}
